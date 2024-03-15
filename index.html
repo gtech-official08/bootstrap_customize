@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Customized Bootstrap</title>
+    <!-- 
+        -Link custom css file
+     -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 
+        -Bootstrap css cdn file
+     -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- 
+        -Google fonts cdn link (Poppins) 
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid h-full px-0 mx-0">
+        <!-- 
+            -Navbar Section 
+         -->
+        <nav class="navbar navbar-expand-lg bg-light py-2 shadow-sm border border-bottom border-gray">
+            <div class="container col-lg-10">
+                <a class="navbar-brand text-primary fs-3 fw-bold text-center d-flex align-items-center" href="/">
+                    CB
+                    <div class="text-secondary text-sm d-flex flex-column text-start ms-2">
+                        Customized <p class="mb-0">Bootstrap</p>
+                    </div>
+                </a>
+                <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 me-4 mb-lg-0 text-light">
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-primary active" aria-current="page" href="/">Home</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-secondary" href="/input.html">Input</a>
+                        </li>
+                        <li class="nav-item me-3">
+                            <a class="nav-link text-secondary" href="/tabs.html">Tabs</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 
+            -Hero Content section
+          -->
+
+        <div class="my-4">
+            <div class="container col-5 bg-light rounded border border-muted py-5">
+                <h6 class="text-black fw-bold fs-5 mb-4 text-center border-bottom pb-2 border-gray">
+                    Make a simple login & register form with modified Bootstrap!
+                </h6>
+                <!-- 
+                    -Tabs for login and register
+                 -->
+                <div class="container-fluid d-flex align-items-center justify-content-center">
+                    <div class="container-fluid col-12">
+                        <!-- 
+                            -Tabs
+                         -->
+                        <div class="container col-5 mb-4">
+                            <ul class="nav nav-pills p-1 rounded-pill" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active rounded-pill px-4" id="pills-login-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-login" type="button" role="tab"
+                                        aria-controls="pills-login" aria-selected="true">login</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link rounded-pill px-4" id="pills-register-tab"
+                                        data-bs-toggle="pill" data-bs-target="#pills-register" type="button" role="tab"
+                                        aria-controls="pills-register" aria-selected="false">register</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- 
+                            -Tabs Content
+                         -->
+                        <div class="tab-content container col-10" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-login" role="tabpanel"
+                                aria-labelledby="pills-login-tab" tabindex="0">
+                                <div
+                                    class="container-fluid bg-white text-primary p-5 rounded shadow-sm border border-gray">
+                                    <h6 class="text-black fs-4 fw-bold mb-1">Login Form</h6>
+                                    <p class="text-secondary fs-6 mb-4">
+                                        Login to your account
+                                    </p>
+                                    <!-- 
+                                        -form section
+                                     -->
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label text-secondary fs-6">Email
+                                                Address</label>
+                                            <input type="email" class="form-control p-2"
+                                                placeholder="e.g. gtech.official08@gmail.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="password" class="form-label text-secondary fs-6">Password
+                                            </label>
+                                            <input type="password" class="form-control p-2"
+                                                placeholder="e.g. Enter your password">
+                                        </div>
+                                        <!-- 
+                                            -checkbox and forgot password
+                                         -->
+                                        <div class="d-flex align-items-center justify-content-between mb-4">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="rememberMeCheckbox">
+                                                <label class="form-check-label text-secondary" for="rememberMeCheckbox">
+                                                    Remember me
+                                                </label>
+                                            </div>
+                                            <a href="#forgotPassword" class="text-decoration-none text-primary fs-6">
+                                                Forgot password?
+                                            </a>
+                                        </div>
+                                        <!-- 
+                                            -button
+                                         -->
+                                        <button class="btn btn-primary rounded-pill w-100 mb-4">Login</button>
+                                        <!-- 
+                                            -Navigation to register
+                                         -->
+                                        <div
+                                            class="d-flex align-items-center justify-content-center text-secondary fs-6 fw-normal">
+                                            Don't have an account?
+                                            <a href="#" class="text-decoration-none text-primary ms-1">
+                                                Register
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="pills-register" role="tabpanel"
+                                aria-labelledby="pills-register-tab" tabindex="0">
+                                <div
+                                    class="container-fluid bg-white text-primary p-5 rounded shadow-sm border border-gray">
+                                    <h6 class="text-black fs-4 fw-bold mb-1">Register Form</h6>
+                                    <p class="text-secondary fs-6 mb-4">
+                                        Create a free account
+                                    </p>
+                                    <!-- 
+                                    -form section
+                                 -->
+                                    <form>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label text-secondary fs-6">
+                                                Email Address
+                                            </label>
+                                            <input type="email" class="form-control p-2"
+                                                placeholder="e.g. gtech.official08@gmail.com">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cpassword" class="form-label text-secondary fs-6">
+                                                Password
+                                            </label>
+                                            <input type="password" class="form-control p-2"
+                                                placeholder="e.g. Enter your password">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cpassword" class="form-label text-secondary fs-6">
+                                                Confirm Password
+                                            </label>
+                                            <input type="password" class="form-control p-2"
+                                                placeholder="e.g. Confirm your password">
+                                        </div>
+                                        <!-- 
+                                        -checkbox
+                                     -->
+                                        <div class="form-check mb-4">
+                                            <input class="form-check-input" type="checkbox" value=""
+                                                id="termsAndConditionsCheckBox">
+                                            <label class="form-check-label text-secondary"
+                                                for="termsAndConditionsCheckBox">
+                                                Accept terms & conditions
+                                            </label>
+                                        </div>
+                                        <!-- 
+                                        -button
+                                     -->
+                                        <button class="btn btn-primary rounded-pill w-100 mb-4">
+                                            Create an Account
+                                        </button>
+                                        <!-- 
+                                        -Navigation to Login
+                                     -->
+                                        <div
+                                            class="d-flex align-items-center justify-content-center text-secondary fs-6 fw-normal">
+                                            Already have an account?
+                                            <a href="#" class="text-decoration-none text-primary ms-1">
+                                                Login
+                                            </a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 
+        -Bootstrap js cdn file
+     -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 
+   - =====================================X=====================================
+*/
+
+/* 
+ -Root Css variables
+*/
+
+:root {
+  --black-color: #2a2a2a;
+  --primary-color: #4f46e5;
+  --secondary-color: #aeaeae;
+  --tertiary-color: #dfdfdf;
+}
+
+/* 
+   - =====================================X=====================================
+*/
+
+/* 
+ -Customize pseudo elements
+*/
+
+::placeholder {
+  color: var(--tertiary-color);
+  font-weight: 400;
+}
+
+/* 
+   - =====================================X=====================================
+*/
+
+/* 
+ -Override Bootstrap CSS variables
+*/
+
+/* 
+-Don't forgot to add !important at end otherwise it won't work 
+*/
+
+body .text-black {
+  color: var(--black-color) !important;
+}
+
+body .text-primary {
+  color: var(--primary-color) !important;
+}
+
+body .text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+body .text-tertiary {
+  color: var(--tertiary-color) !important;
+}
+
+.text-sm {
+  font-size: 0.65rem !important;
+}
+
+.btn-primary {
+  background: var(--primary-color) !important;
+}
+
+/* 
+   - =====================================X=====================================
+*/
+
+/* 
+ -Customize Bootstrap Navpills (Tabs)
+*/
+
+.nav-pills {
+  border: 2px solid var(--primary-color);
+}
+.nav-pills .nav-link {
+  border-radius: 30px !important;
+  width: auto;
+  color: var(--primary-color);
+  background: transparent;
+}
+
+.nav-pills .nav-link:hover {
+  color: var(--primary-color);
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: var(--secondary-color);
+  background: var(--primary-color) !important;
+  border-bottom: none;
+}
+
+/* 
+   - =====================================X=====================================
+*/
+
+/* 
+ -Removing the outline on the focus
+*/
+
+.btn {
+  font-size: 1.03rem;
+  padding: 0.55rem auto !important;
+  outline: none;
+  border: 1px solid var(--primary-color) !important;
+}
+
+/* 
+    -For Button (in v5.2 and lower)
+ */
+.btn:focus,
+.btn:active,
+.btn.active:focus {
+  outline: none;
+  box-shadow: none !important;
+}
+
+/* 
+    -For Input (input, checkbox, radio, etc)
+*/
+
+.form-control {
+  border: 2px solid var(--tertiary-color) !important;
+}
+
+.form-control:focus,
+.form-control:active,
+.form-control.active:focus {
+  outline: none;
+  box-shadow: none !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+.form-check-input:focus,
+.form-check-input:active,
+.form-check-input.active:focus {
+  outline: none;
+  box-shadow: none !important;
+  border: 2px solid var(--primary-color) !important;
+}
+
+/* 
+   - =====================================X=====================================
+*/
+
+/* 
+ -Customize the scrollbar
+*/
+
+/* 
+    -Scrollbar width
+*/
+::-webkit-scrollbar {
+  width: 8px;
+  border-radius: 10px;
+}
+
+/* 
+    -Scrollbar Track of the scrollbar
+*/
+
+::-webkit-scrollbar-track {
+  background: var(--tertiary-color);
+  border-radius: 10px;
+}
+
+/* 
+    -Scrollbar Handle of the scrollbar
+*/
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 10px;
+}
+
+/* 
+    -Scrollbar Handle on hover of the scrollbar
+*/
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+  border-radius: 10px;
+}
